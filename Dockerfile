@@ -1,6 +1,14 @@
 
+
+
 FROM openjdk:8-jdk-alpine
 WORKDIR /app
-COPY ./src/DockerDemo.java /app
+
+# Copy the Java source file into the container
+COPY ./src/DockerDemo.java /app/
+
+# Compile the Java file
 RUN javac DockerDemo.java
-CMD ["java","DokerDemo" ]
+
+# Run the DockerDemo class
+CMD ["java", "DockerDemo"]
