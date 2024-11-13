@@ -27,12 +27,13 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/a18_oussamahachemi_final_1270 .
+        docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/a18_oussamahachemi_final_1270 .
 
     - name: Run Docker container
       run: |
-        docker run --rm ${{ secrets.DOCKER_USERNAME }}/a18_oussamahachemi_final_1270
+        docker run --rm ${{ secrets.DOCKER_HUB_USERNAME }}/a18_oussamahachemi_final_1270
 
     - name: Push Docker image to Docker Hub
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/a18_oussamahachemi_final_1270
+        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/a18_oussamahachemi_final_1270
+
